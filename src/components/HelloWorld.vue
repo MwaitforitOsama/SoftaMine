@@ -216,7 +216,7 @@ h2 span:nth-child(1) {
   position: absolute;
   top: 0;
   left: 0;
-  color: white;
+  color: red;
   transition: 0.5s;
   clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
   overflow: hidden;
