@@ -30,6 +30,6 @@ export default {
 <style>
 .v-application .indigo.lighten-1 {
   width: 100%;
-  background-color: dodgerblue !important;
+  background-color: black !important;
 }
 </style>
