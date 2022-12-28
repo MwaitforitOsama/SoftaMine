@@ -262,10 +262,10 @@ h2:hover span:nth-child(3) {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-60%, -40%);
     color: transparent;
     text-transform: uppercase;
-    font-size: 2.2em;
+    font-size: 2em;
     text-align: center;
     font-family: consolas;
     margin: 0;
@@ -275,7 +275,9 @@ h2:hover span:nth-child(3) {
     position: absolute;
     top: 0;
     left: 0;
-    color: white;
+    color: red;
+    padding-right: 20px;
+    justify-content: center;
     transition: 0.5s;
     clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
     overflow: hidden;
@@ -298,13 +300,13 @@ h2:hover span:nth-child(3) {
 
   h2 span:nth-child(3) {
     position: relative;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%) scaleY(0);
+    top: 80%;
+    left: 20px;
+    transform: translate(-0%) scaleY(0);
     width: 100%;
     color: bisque;
 
-    font-size: 0.3em;
+    font-size: 0.25em;
     font-weight: 800;
     padding-left: 10px;
     margin-left: 10px;
