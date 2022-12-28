@@ -153,7 +153,7 @@ export default {
 
     function draw() {
       ctx.clearRect(0, 0, w, h);
-      ctx.fillStyle = "white";
+      ctx.fillStyle = "black";
 
       stars.forEach((star) => {
         ctx.beginPath();
@@ -190,7 +190,7 @@ export default {
 
 <style>
 canvas {
-  background-color: black !important;
+  background-color: white !important;
 }
 
 .canvas-container {
@@ -228,7 +228,7 @@ h2 span:nth-child(2) {
   position: absolute;
   top: 0;
   left: 0;
-  color: white;
+  color: black;
   transition: 0.5s;
   clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
   overflow: hidden;
@@ -243,7 +243,7 @@ h2 span:nth-child(3) {
   left: 0;
   transform: translateY(-50%) scaleY(0);
   width: 100%;
-  color: bisque;
+  color: red;
 
   font-size: 0.3em;
   font-weight: 800;
