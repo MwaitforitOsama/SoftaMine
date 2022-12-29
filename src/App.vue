@@ -4,8 +4,8 @@
       <MyHeader />
 
       <router-view />
-      <MyFooter />
     </v-main>
+    <MyFooter />
   </v-app>
 </template>
 
