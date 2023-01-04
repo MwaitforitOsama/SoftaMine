@@ -1,16 +1,14 @@
 <template>
-  <v-carousel :show-arrows="true" hide-delimiters>
-    <!-- <v-carousel-item
-      v-for="(item, i) in items"
-      :key="i"
-      :src="getImgUrl(item.src)"
-    ></v-carousel-item> -->
-    <div class="carousel-item">
-      <img :src="getFirstIndex(items)" />
-
-      <img :src="getSecondIndex(items)" :style="{ opacity: 0.5, width: 100 }" />
+  <div class="carousel-container">
+    <div
+      class="carousel-items"
+      v-animate-css="{ name: 'slide', duration: 500, easing: 'ease' }"
+    >
+      <div class="carousel-item" v-for="(item, index) in items" :key="index">
+        <img :src="getImgUrl(item.src)" :style="{ width: '70px' }" />
+      </div>
     </div>
-  </v-carousel>
+  </div>
 </template>
 
 <script>
@@ -20,25 +18,63 @@ arr = arr.map((i) => i.slice(1));
 for (var i = 0; i < arr.length; i++) {
   arr[i] = { src: arr[i] };
 }
-console.log(arr);
+
+// Add a duplicate set of images to the end of the array
+const items = [...arr, ...arr];
+
 export default {
   data() {
     return {
       getImgUrl(item) {
         return require("../assets/logos" + item);
       },
-      getFirstIndex(item) {
-        return require("../assets/logos" + item[0].src);
-      },
-      getSecondIndex(item) {
-        return require("../assets/logos" + item[1].src);
-      },
-
-      items: arr,
+      items: items,
+      currentIndex: 0,
+      intervalId: 0,
+      speed: 2000, // adjust this value to change the speed of the carousel
     };
   },
+  mounted() {
+    this.intervalId = setInterval(() => {
+      this.currentIndex = (this.currentIndex + 1) % this.items.length;
+    }, this.speed);
+  },
+
+  beforeDestroy() {
+    clearInterval(this.intervalId);
+  },
 };
+console.log(items.length);
 </script>
+<style>
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+</style>
+
+<style>
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  height: 100px;
+}
+
+.carousel-items {
+  display: flex;
+  transition: transform 0.5s ease;
+  will-change: transform;
+  animation: slide 20s linear 5s infinite;
+}
+
+.carousel-item {
+  flex: 0 0 auto;
+}
+</style>
 
 <style>
 .carousel-item {
@@ -46,8 +82,13 @@ export default {
   justify-content: center;
   align-items: center;
 }
-.img {
-  max-width: 100px !important;
+img {
+  border-style: none;
+  margin-left: 60px !important;
+  margin-right: 60px !important;
+}
+.v-window__container {
+  flex-direction: row !important;
 }
 
 @media screen and (max-width: 768px) {

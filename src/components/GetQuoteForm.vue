@@ -74,6 +74,7 @@ export default {
   methods: {
     submit() {
       if (this.$refs.form.validate()) {
+        console.log(this.$refs.form.validate());
         // form is valid
         // send the form data to your backend server
       }
