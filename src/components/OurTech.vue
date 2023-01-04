@@ -2,9 +2,7 @@
   <v-container fluid>
     <v-flex>
       <div>
-        <h1 class="display-2 font-weight-bold mb-3">
-          Technologies We Work On!
-        </h1>
+        <h1 class="display-2 font-weight-bold mb-3">Technologies We Work On!</h1>
       </div>
     </v-flex>
     <v-row>
@@ -32,7 +30,7 @@
         <img src="../assets/Python.png" width="55" height="55" />
       </v-col>
       <v-col cols="3">
-        <img src="../assets/aws.webp" width="70" height="60" />
+        <img src="../assets/AWS.webp" width="70" height="60" />
       </v-col>
     </v-row>
   </v-container>
@@ -47,13 +45,13 @@ export default {
 <style scoped>
 .container {
   text-align: center !important;
-  background-image: radial-gradient(black, black, black);
+  background-color: rgba(255, 255, 255, 0.8);
   max-width: 100% !important;
 }
 .v-application .display-2 {
   text-align: center !important;
   justify-content: center !important;
-  color: white !important;
+  color: black !important;
   margin: 5px;
   padding-bottom: 15px;
 

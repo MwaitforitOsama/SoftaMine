@@ -2,7 +2,7 @@
   <v-container>
     <v-layout row wrap align-center>
       <v-flex xs12 md6 lg6 xl6>
-        <v-img aspect-ratio="1.5" src="../assets/Developers.jpg" alt="Dev" />
+        <v-img aspect-ratio="1.5" src="../assets/radom.jpg" alt="Dev" />
       </v-flex>
       <v-flex xs12 md6 lg6 xl6>
         <h2>Our Mission</h2>

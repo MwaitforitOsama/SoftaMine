@@ -56,7 +56,7 @@ a:-webkit-any-link:active {
 }
 .v-toolbar__items {
   width: calc(100% - 5%);
-  justify-content: right;
+  justify-content: center;
 }
 .v-item-group {
   display: flex;
@@ -69,10 +69,6 @@ a:-webkit-any-link:active {
 </style>
 
 <style>
-.my-nav-bar {
-  background-image: url
-    "(https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg)";
-}
 .theme--light.v-app-bar.v-toolbar.v-sheet {
   background-color: rgba(255, 255, 255, 0.25) !important;
 }

@@ -1,5 +1,5 @@
 <template>
-  <v-carousel :show-arrows="false" hide-delimiters>
+  <v-carousel :show-arrows="true" hide-delimiters>
     <v-carousel-item
       v-for="(item, i) in items"
       :key="i"
@@ -9,7 +9,10 @@
 </template>
 
 <script>
-export default {
+getImgUrl(pic) {
+    return require('../assets/'+pic);
+}
+
   data() {
     return {
       items: [
