@@ -13,6 +13,7 @@
     <v-container>
       <v-col class="mb-5" cols="12"> </v-col>
     </v-container>
+    <h1>Technologies We Love!</h1>
   </div>
 </template>
 
@@ -77,6 +78,9 @@ export default {
 <style scoped></style>
 
 <style>
+.container {
+  padding: 0;
+}
 .v-application .mb-3 {
   text-align: center !important;
 }
@@ -114,7 +118,7 @@ h2 span:nth-child(1) {
   overflow: hidden;
 }
 h2:hover span:nth-child(1) {
-  transform: translateY(-35px);
+  transform: translate3d(-35px, -35px, -35px);
 }
 h2 span:nth-child(2) {
   position: absolute;
@@ -126,7 +130,7 @@ h2 span:nth-child(2) {
   overflow: hidden;
 }
 h2:hover span:nth-child(2) {
-  transform: translateY(40px);
+  transform: translate3d(35px, 35px, 35px);
 }
 
 h2 span:nth-child(3) {
@@ -209,5 +213,14 @@ h2:hover span:nth-child(3) {
   h2:hover span:nth-child(3) {
     transform: translateY(-50%) scaleY(1);
   }
+}
+</style>
+
+<style scoped>
+h1 {
+  text-align: center !important;
+  font-size: 50px;
+  font-weight: 800;
+  margin-bottom: 20px;
 }
 </style>

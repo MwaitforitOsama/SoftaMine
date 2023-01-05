@@ -53,8 +53,8 @@ export default {
     description: "",
     budget: "",
     deadline: "",
-    agreement: false,
-    valid: false,
+    agreement: true,
+    valid: true,
     nameRules: [(v) => !!v || "Name is required"],
     emailRules: [
       (v) => !!v || "Email is required",

@@ -68,7 +68,7 @@ console.log(items.length);
   display: flex;
   transition: transform 0.5s ease;
   will-change: transform;
-  animation: slide 20s linear 5s infinite;
+  animation: slide 30s linear 1s infinite;
 }
 
 .carousel-item {
